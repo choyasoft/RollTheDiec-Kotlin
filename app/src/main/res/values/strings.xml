@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RollTheDice</string>
+    <string name="player_a">Player A</string>
+    <string name="game_point_a">0</string>
+    <string name="player_b">Player B</string>
+    <string name="game_point_b">0</string>
+    <string name="game_point">Game Point</string>
+    <string name="game_point_default">100</string>
+    <string name="dice_image_contentDescription">Dice Image</string>
+    <string name="game_over_msg">The winner is :</string>
+    <string name="btn_start_game">Start</string>
+    <string name="btn_stop_game">Stop</string>
+
+</resources>
