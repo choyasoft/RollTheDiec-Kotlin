@@ -1,5 +1,8 @@
 package com.dewan.rollthedice
 
+import android.graphics.Color
+import android.graphics.Color.BLACK
+import android.graphics.Color.RED
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         val dice_image: ImageView = findViewById(R.id.dice_image)
         val btnGamePlay: Button = findViewById<Button>(R.id.btnGamePlay)
 
+        val lbplayerA: TextView = findViewById<Button>(R.id.lbPlayerA)
+        val lbplayerB: TextView = findViewById<Button>(R.id.lbPlayerB)
+
 
         // Deshabilitar dice_image
         dice_image.isEnabled = false
@@ -49,9 +55,15 @@ class MainActivity : AppCompatActivity() {
 
             // Cambiar el valor del botón a "Reset"
             btnGamePlay.setText("REINICIAR")
+            // Reiniciar los colores de jugador A y B
+            lbplayerA.setTextColor(BLACK)
+            lbplayerB.setTextColor(BLACK)
             //enable the player A
             ACTIVE_PLAYER_A = true
+            // Marcamos en rojo el jugador activo "A" y en negro el "B"
+            lbplayerA.setTextColor(RED)
             ACTIVE_PLAYER_B = false
+            lbplayerB.setTextColor(BLACK)
 
             // Resetear la imagen con dado 1
             dice_image.setImageResource(R.drawable.dice1)
@@ -92,7 +104,10 @@ class MainActivity : AppCompatActivity() {
                 tvGamePointA.text = SCORE_PLAYER_A.toString()
                 //Habilitar el jugador B y deshabilitar el jugador A
                 ACTIVE_PLAYER_A = false
+                // Marcamos en rojo el jugador activo "B" y en negro el "A"
+                lbplayerA.setTextColor(BLACK)
                 ACTIVE_PLAYER_B = true
+                lbplayerB.setTextColor(RED)
 
                 // Comprobar el objetivo
                 if (SCORE_PLAYER_A >= 100){
@@ -112,7 +127,10 @@ class MainActivity : AppCompatActivity() {
                 tvGamePointB.text = SCORE_PLAYER_B.toString()
                 // Habilitar el jugador A y deshabilitar el jugador B
                 ACTIVE_PLAYER_B = false
+                // Marcamos en rojo el jugador activo "A" y en negro el "B"
+                lbplayerB.setTextColor(BLACK)
                 ACTIVE_PLAYER_A = true
+                lbplayerA.setTextColor(RED)
 
                 // Comprobar el objetivo
                 if (SCORE_PLAYER_B >= 100){
@@ -122,6 +140,9 @@ class MainActivity : AppCompatActivity() {
 
                     // Desactivar el ImageView
                     dice_image.isEnabled = false
+                    // Devolver a los jugadores a su color inicial
+                    lbplayerA.setTextColor(BLACK)
+                    lbplayerB.setTextColor(BLACK)
                 }
             }
 
