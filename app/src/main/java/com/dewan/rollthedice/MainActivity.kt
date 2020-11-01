@@ -3,7 +3,8 @@ package com.dewan.rollthedice
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import kotlinx.android.synthetic.main.activity_main.*
+import android.widget.Button
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+    val tvGameOverMsg: TextView = findViewById<Button>(R.id.tvGameOverMsg)
+
 
         //disable dice_image
         dice_image.isEnabled = false
@@ -86,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                 //check the game point
                 if (SCORE_PLAYER_A >= 100){
                     GAME_END_MSG_DEFAULT = resources.getText(R.string.game_over_msg).toString()
-                    GAME_END_MSG = GAME_END_MSG_DEFAULT + " Player A"
+                    GAME_END_MSG = GAME_END_MSG_DEFAULT + " Jugador A"
                     tvGameOverMsg.text = GAME_END_MSG
 
                     //disable the image view
@@ -106,7 +110,7 @@ class MainActivity : AppCompatActivity() {
                 //check the game point
                 if (SCORE_PLAYER_B >= 100){
                     GAME_END_MSG_DEFAULT = resources.getText(R.string.game_over_msg).toString()
-                    GAME_END_MSG = GAME_END_MSG_DEFAULT + " Player B"
+                    GAME_END_MSG = GAME_END_MSG_DEFAULT + " Jugador B"
                     tvGameOverMsg.text = GAME_END_MSG
 
                     //disable the image view
