@@ -38,11 +38,11 @@ class MainActivity : AppCompatActivity() {
             //habilitar dice_image
             dice_image.isEnabled = true
 
-            //reset the score for the player
+            //Resetear la puntuación de los jugadores
             SCORE_PLAYER_A = 0
             SCORE_PLAYER_B = 0
 
-            //clear the text view and set the default value
+            //Limpiar el TexyView al valor inicial
             tvGameOverMsg.text = ""
             tvGamePointA.text = "0"
             tvGamePointB.text = "0"
@@ -84,46 +84,46 @@ class MainActivity : AppCompatActivity() {
             }
 
             if (ACTIVE_PLAYER_A){
-                //add the score to player a
+                //Añadir puntuación al jugador A
                 SCORE_PLAYER_A  = SCORE_PLAYER_A +  random_number
-                //set the text of the text view
+                //Setear el texto del TextView
                 tvGamePointA.text = SCORE_PLAYER_A.toString()
-                //enable player b and disable player a
+                //Habilitar el jugador B y deshabilitar el jugador A
                 ACTIVE_PLAYER_A = false
                 ACTIVE_PLAYER_B = true
 
-                //check the game point
+                //Comprobar el objetivo
                 if (SCORE_PLAYER_A >= 100){
                     GAME_END_MSG_DEFAULT = resources.getText(R.string.game_over_msg).toString()
                     GAME_END_MSG = GAME_END_MSG_DEFAULT + " Jugador A"
                     tvGameOverMsg.text = GAME_END_MSG
 
-                    //disable the image view
+                    //Desactivar el ImageView
                     dice_image.isEnabled = false
                 }
 
             }
             else {
-                //add the score to player b
+                //Añadir puntuación al jugador B
                 SCORE_PLAYER_B += random_number
-                //set the text of the text view
+                //Setear el texto del TextView
                 tvGamePointB.text = SCORE_PLAYER_B.toString()
-                //enable player a and disable player b
+                //Habilitar el jugador A y deshabilitar el jugador B
                 ACTIVE_PLAYER_B = false
                 ACTIVE_PLAYER_A = true
 
-                //check the game point
+                //Comprobar el objetivo
                 if (SCORE_PLAYER_B >= 100){
                     GAME_END_MSG_DEFAULT = resources.getText(R.string.game_over_msg).toString()
                     GAME_END_MSG = GAME_END_MSG_DEFAULT + " Jugador B"
                     tvGameOverMsg.text = GAME_END_MSG
 
-                    //disable the image view
+                    //Desactivar el ImageView
                     dice_image.isEnabled = false
                 }
             }
 
-            //show the random number in our log cat
+            //Mostrar el número aleatorio en el log cat
             Log.e(TAG,random_number.toString())
         }
 

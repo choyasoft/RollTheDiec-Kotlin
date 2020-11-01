@@ -8,7 +8,7 @@
     <string name="game_point_default">100</string>
     <string name="dice_image_contentDescription">Imagen Dado</string>
     <string name="game_over_msg">El ganador es :</string>
-    <string name="btn_start_game">Comenzar</string>
+    <string name="btn_start_game">Iniciar</string>
     <string name="btn_stop_game">Parar</string>
 
 </resources>
