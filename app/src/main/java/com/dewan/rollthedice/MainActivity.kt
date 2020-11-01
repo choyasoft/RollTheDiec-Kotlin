@@ -42,11 +42,13 @@ class MainActivity : AppCompatActivity() {
             SCORE_PLAYER_A = 0
             SCORE_PLAYER_B = 0
 
-            //Limpiar el TexyView al valor inicial
+            //Limpiar el TextView al valor inicial
             tvGameOverMsg.text = ""
             tvGamePointA.text = "0"
             tvGamePointB.text = "0"
 
+            // Cambiar el valor del botón a "Reset"
+            btnGamePlay.setText("REINICIAR")
             //enable the player A
             ACTIVE_PLAYER_A = true
             ACTIVE_PLAYER_B = false
