@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 
 
@@ -22,14 +23,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    val tvGameOverMsg: TextView = findViewById<Button>(R.id.tvGameOverMsg)
+        val tvGameOverMsg: TextView = findViewById<Button>(R.id.tvGameOverMsg)
+        val tvGamePointA: TextView = findViewById<Button>(R.id.tvGamePointA)
+        val tvGamePointB: TextView = findViewById<Button>(R.id.tvGamePointB)
+        val dice_image: ImageView = findViewById(R.id.dice_image)
+        val btnGamePlay: Button = findViewById<Button>(R.id.btnGamePlay)
 
 
-        //disable dice_image
+        //deshabilitar dice_image
         dice_image.isEnabled = false
 
         btnGamePlay.setOnClickListener {
-            //enable dice_image
+
+            //habilitar dice_image
             dice_image.isEnabled = true
 
             //reset the score for the player
@@ -49,7 +55,6 @@ class MainActivity : AppCompatActivity() {
             dice_image.setImageResource(R.drawable.dice1)
 
         }
-
 
 
         dice_image.setOnClickListener {
