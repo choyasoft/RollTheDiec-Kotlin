@@ -5,7 +5,7 @@
     <string name="player_b">Jugador B</string>
     <string name="game_point_b">0</string>
     <string name="game_point">Objetivo</string>
-    <string name="game_point_default">60</string>
+    <string name="game_point_default">40</string>
     <string name="dice_image_contentDescription">Imagen Dado</string>
     <string name="game_over_msg">El ganador es:</string>
     <string name="btn_start_game">Iniciar</string>
