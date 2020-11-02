@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
                 lbplayerB.setTextColor(RED)
 
                 // Comprobar el objetivo
-                if (SCORE_PLAYER_A >= 100){
+                if (SCORE_PLAYER_A >= 60){
                     GAME_END_MSG_DEFAULT = resources.getText(R.string.game_over_msg).toString()
                     GAME_END_MSG = GAME_END_MSG_DEFAULT + " Jugador A"
                     tvGameOverMsg.text = GAME_END_MSG
@@ -133,7 +133,7 @@ class MainActivity : AppCompatActivity() {
                 lbplayerA.setTextColor(RED)
 
                 // Comprobar el objetivo
-                if (SCORE_PLAYER_B >= 100){
+                if (SCORE_PLAYER_B >= 60){
                     GAME_END_MSG_DEFAULT = resources.getText(R.string.game_over_msg).toString()
                     GAME_END_MSG = GAME_END_MSG_DEFAULT + " Jugador B"
                     tvGameOverMsg.text = GAME_END_MSG
